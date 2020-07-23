@@ -1,0 +1,94 @@
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+
+        <h2 class="ui header">
+            <img class="ui image" src="/assets/images/book.png">
+            <div class="content">
+                <u>Background Check.</u>
+            </div>
+        </h2>
+
+        Click here to download code of conduct. <a href="/assets/documents/doc.pdf" target="_blank">Code of Conduct</a>
+
+        <br>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="form" class="ui form">
+            <h4>  </h4>
+            <h4 class="ui dividing header">Personal Information</h4>
+            <div class="field">
+
+                <div class="two fields">
+                    <div class="field form-group">
+                        <label for="firstName"></label>
+                        <input class="form-control" formControlName="firstName" id="firstName" placeholder="First Name" type="text">
+                    </div>
+                    <div class="field form-group">
+                        <label for="lastName"></label>
+                        <input class="form-control" formControlName="lastName" id="lastName" placeholder="Last Name" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="ui dividing header">Contact Information</h4>
+            <div class="field">
+
+                <div class="two fields">
+                    <div class="field form-group">
+                        <label for="phoneNumber"></label>
+                        <input class="form-control" formControlName="phoneNumber" id="phoneNumber" placeholder="Phone Number" type="text">
+                    </div>
+                    <div class="field form-group">
+                        <label for="email"></label>
+                        <input class="form-control" formControlName="email" id="email" placeholder="Email" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="ui dividing header">Uploads</h4>
+
+            <div class="field">
+
+
+                <div class="one field">
+                    <div class="field form-group">
+                        <label for="codeOfConductFile">Code of Conduct</label>
+                        Upload a signed copy of the Code of conduct that you downloaded above.
+                        <input #codeOfConductFile (change)="onFileChange($event)" id="codeOfConductFile" type="file">
+                    </div>
+                </div>
+
+
+
+                <div class="two fields">
+                    <div class="field form-group">
+                        <label for="idBack">Id Back</label>
+                        <input #idBack (change)="onFileChange($event)" id="idBack" type="file">
+                    </div>
+
+                    <div class="field form-group">
+                        <label for="idFront">Id Front</label>
+                        <input #idFront (change)="onFileChange($event)" id="idFront" type="file">
+                    </div>
+                </div>
+
+                <div class="two fields">
+                    <div class="field form-group">
+                        <label for="certificateOne">Certificate One</label>
+                        <input #certificateOne (change)="onFileChange($event)" id="certificateOne" type="file">
+                    </div>
+
+                    <div class="field form-group">
+                        <label for="certificateTwo">Certificate Two</label>
+                        <input #certificateTwo (change)="onFileChange($event)" id="certificateTwo" type="file">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <button [disabled]="form.invalid || loading" class="ui submit button primary" type="submit">Submit <i
+                    *ngIf="loading" class="fa fa-spinner fa-spin fa-fw"></i></button>
+        </form>
+    </div>
+</div>
