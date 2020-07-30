@@ -32,7 +32,7 @@ export class SigninComponent implements OnInit {
 
         this.authService.signin(this.authForm.value).subscribe({
             next: () => {
-                this.router.navigateByUrl('/inbox');
+                this.router.navigateByUrl('/teacher/steps');
             },
             error: (error) => {
                 // tslint:disable-next-line:triple-equals

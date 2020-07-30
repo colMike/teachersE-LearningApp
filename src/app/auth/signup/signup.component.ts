@@ -66,7 +66,7 @@ export class SignupComponent implements OnInit {
         this.authService.signup(this.authForm.value).subscribe({
             next: response => {
                 // Navigate to some other route
-                this.router.navigateByUrl('/inbox');
+                this.router.navigateByUrl('/teacher/steps');
             },
             error: err => {
                 if (!err.status) {

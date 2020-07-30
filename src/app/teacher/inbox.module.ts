@@ -6,11 +6,11 @@ import { TeacherHomeComponent } from './teacherHome/teacher-home.component';
 import { FinalComponent } from './final/final.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
-import { MajaribuComponent } from './majaribu/majaribu.component';
+import { StepsComponent } from './steps/steps.component';
 
 
 @NgModule({
-  declarations: [TeacherHomeComponent, FinalComponent, MajaribuComponent],
+  declarations: [TeacherHomeComponent, FinalComponent, StepsComponent],
     imports: [
         CommonModule,
         InboxRoutingModule,

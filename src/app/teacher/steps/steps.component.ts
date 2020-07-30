@@ -4,11 +4,11 @@ import {Router} from '@angular/router';
 import {BackgroundService} from '../background.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './teacher-home.component.html',
-    styleUrls: ['./teacher-home.component.css']
+    selector: 'app-majaribu',
+    templateUrl: './steps.component.html',
+    styleUrls: ['./steps.component.css']
 })
-export class TeacherHomeComponent {
+export class StepsComponent {
 
     form: FormGroup;
     loading: boolean = false;
@@ -81,7 +81,7 @@ export class TeacherHomeComponent {
         this.backgroundService.submitDocs(this.form.value).subscribe({
             next: response => {
                 // Navigate to some other route
-                this.router.navigateByUrl('/inbox/final');
+                this.router.navigateByUrl('/teacher/final');
             },
             error: err => {
                 if (!err.status) {

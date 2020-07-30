@@ -64,7 +64,7 @@
 
 <!--      <ng-container *ngIf="signedin">-->
 <!--        <div class="item">-->
-<!--          <a class="ui button" routerLink="/inbox" routerLinkActive="active">-->
+<!--          <a class="ui button" routerLink="/teacher" routerLinkActive="active">-->
 <!--            Inbox-->
 <!--          </a>-->
 <!--        </div>-->
@@ -100,7 +100,7 @@
 
 <!--  <ng-container>-->
 
-<!--      <a class="ui button" routerLink="/inbox" routerLinkActive="active">-->
+<!--      <a class="ui button" routerLink="/teacher" routerLinkActive="active">-->
 <!--        Inbox-->
 <!--      </a>-->
 
@@ -125,6 +125,14 @@
             </a>
             <a class="active item" routerLink="/">Home</a>
             <div class="right item">
+
+                <a class="ui inverted button" style="margin-right: 5%" routerLink="/inbox" routerLinkActive="active">
+                    Teachers
+                </a>
+
+                <a class="ui inverted button" routerLink="/signout" routerLinkActive="active">
+                    Students
+                </a>
 
                 <ng-container *ngIf="signedin">
 
@@ -172,7 +180,7 @@
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">
-                        <h4 class="ui inverted header">About</h4>
+                        <h4 class="ui inverted header"><u>About</u></h4>
                         <div class="ui inverted link list">
                             <a class="item" routerLink="">Who are we?</a>
                             <a class="item" routerLink="">Our Values</a>
@@ -181,7 +189,7 @@
                         </div>
                     </div>
                     <div class="three wide column">
-                        <h4 class="ui inverted header">Resources</h4>
+                        <h4 class="ui inverted header"><u>Resources</u></h4>
                         <div class="ui inverted link list">
                             <a class="item" routerLink="">Mwalimu_Wetu Blog</a>
                             <a class="item" routerLink="">Teaching Resources</a>
