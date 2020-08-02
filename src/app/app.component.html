@@ -123,18 +123,22 @@
             <a class="toc item">
                 <i class="sidebar icon"></i>
             </a>
-            <a class="active item" routerLink="/">Home</a>
+            <a class="active item" href="/">Home</a>
             <div class="right item">
 
-                <a class="ui inverted button" style="margin-right: 5%" routerLink="/inbox" routerLinkActive="active">
-                    Teachers
-                </a>
 
-                <a class="ui inverted button" routerLink="/signout" routerLinkActive="active">
-                    Students
-                </a>
+                <ng-container *ngIf="currentPath == '/'">
+                    <a class="ui inverted button" style="margin-right: 5%" routerLink="/teacher" routerLinkActive="active">
+                        Teachers
+                    </a>
 
-                <ng-container *ngIf="signedin">
+                    <a class="ui inverted button" routerLink="/student" routerLinkActive="active">
+                        Students
+                    </a>
+                </ng-container>
+
+
+                <ng-container *ngIf="signedin && currentPath !== '/'">
 
                     <a class="ui inverted button" style="margin-right: 5%" routerLink="/inbox" routerLinkActive="active">
                         Inbox
@@ -146,7 +150,7 @@
 
                 </ng-container>
 
-                <ng-container *ngIf="!(signedin)">
+                <ng-container *ngIf="!(signedin) && currentPath !== '/'">
 
                     <a [routerLinkActiveOptions]="{ exact: true }"
                        class="ui inverted button"

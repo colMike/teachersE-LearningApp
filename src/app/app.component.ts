@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from './auth/auth.service';
+import {TeacherAuthService} from './teacherAuth/teacher-auth.service';
+import {CheckPageService} from './shared/check-page.service';
 
 @Component({
     selector: 'app-root',
@@ -9,11 +10,24 @@ import {AuthService} from './auth/auth.service';
 export class AppComponent implements OnInit {
     signedin = false;
 
-    constructor(private authService: AuthService) {
-      if (!localStorage.getItem('id_token')) {
-        this.signedin = false;
-      }
-      this.authService.signedin$.subscribe((signedIn) => {
+    currentPath = '/';
+
+    constructor(
+        private authService: TeacherAuthService,
+        private data: CheckPageService,
+    ) {
+        this.data.currentMessage.subscribe(message => {
+            setTimeout(() => {
+                this.currentPath = message;
+                // alert(this.currentPath);
+            }, 0);
+        });
+
+
+        if (!localStorage.getItem('id_token')) {
+            this.signedin = false;
+        }
+        this.authService.signedin$.subscribe((signedIn) => {
             this.signedin = signedIn;
         });
 
@@ -21,5 +35,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.data.changeMessage(window.location.pathname);
     }
+
 }

@@ -1,0 +1,37 @@
+<div class="ui vertical stripe segment">
+  <div class="ui text container">
+
+  <h3>Sign In</h3>
+<form (ngSubmit)="onSubmit()" class="ui form" [formGroup]="authForm">
+  <app-input
+    inputType="text"
+    label="Email"
+    [control]="authForm.get('email')"
+  >
+  </app-input>
+
+  <app-input
+    inputType="password"
+    label="Password"
+    [control]="authForm.get('password')"
+  >
+  </app-input>
+
+  <div *ngIf="authForm.errors" class="ui red basic label">
+    <p *ngIf="authForm.errors.credentials">
+      Invalid username or password
+    </p>
+  </div>
+
+  <div>
+
+    <p>Don't have an account? <a class="" routerLink="/student/signup">Click here to create one</a></p>
+    <br>
+    <button class="ui submit button primary">
+      Submit
+    </button>
+  </div>
+</form>
+
+  </div>
+</div>

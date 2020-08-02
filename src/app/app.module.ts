@@ -2,19 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { AuthHttpInterceptor } from './auth/auth-http-interceptor';
+import { TeacherAuthHttpInterceptor } from './teacherAuth/teacher-auth-http-interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth.module';
+import { TeacherAuthModule } from './teacherAuth/teacher-auth.module';
+import { AuthModule } from './studentAuth/auth.module';
 import { HomeComponent } from './home/home.component';
-import { SelectRoleComponent } from './home/select-role/select-role.component';
+
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SelectRoleComponent, NotFoundComponent],
-  imports: [BrowserModule, AuthModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent],
+  imports: [BrowserModule, TeacherAuthModule, AuthModule, AppRoutingModule, HttpClientModule],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TeacherAuthHttpInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
