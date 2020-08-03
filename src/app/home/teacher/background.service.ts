@@ -25,7 +25,8 @@ interface ServerResponse {
 })
 export class BackgroundService {
 
-  rootUrl = 'http://localhost:8080/api';
+  // rootUrl = 'http://localhost:8181/api';
+  rootUrl = 'http://46.101.233.134/app2/api';
 
   constructor(private http: HttpClient) { }
 

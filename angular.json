@@ -27,8 +27,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/semantic-ui-css/semantic.css"
+              "./node_modules/jquery/dist/jquery.js"
             ]
           },
           "configurations": {
@@ -41,7 +40,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "extractCss": true,
               "namedChunks": false,
               "aot": true,

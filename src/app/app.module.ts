@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {SuiModule} from 'ng2-semantic-ui';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { TeacherAuthHttpInterceptor } from './teacherAuth/teacher-auth-http-interceptor';
@@ -13,7 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
-  imports: [BrowserModule, TeacherAuthModule, AuthModule, AppRoutingModule, HttpClientModule],
+  imports: [SuiModule, BrowserModule, TeacherAuthModule, AuthModule, AppRoutingModule, HttpClientModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TeacherAuthHttpInterceptor, multi: true }
   ],
