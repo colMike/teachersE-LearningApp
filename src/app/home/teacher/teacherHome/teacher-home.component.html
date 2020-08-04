@@ -16,7 +16,6 @@
 <!--        Click here to download code of conduct. <a href="/assets/documents/Mwalimu Wetu - Code of Coduct Document.pdf" target="_blank">Code of Conduct</a>-->
 
 
-
 <!--        <br>-->
 
 <!--        <form (ngSubmit)="onSubmit()" [formGroup]="form" class="ui form">-->
@@ -66,7 +65,6 @@
 <!--                </div>-->
 
 
-
 <!--                <div class="two fields">-->
 <!--                    <div class="field form-group">-->
 <!--                        <label for="idBack">Id Back</label>-->
@@ -93,7 +91,6 @@
 <!--            </div>-->
 
 
-
 <!--            <button [disabled]="form.invalid || loading" class="ui submit button primary" type="submit">Submit <i-->
 <!--                    *ngIf="loading" class="fa fa-spinner fa-spin fa-fw"></i></button>-->
 <!--        </form>-->
@@ -101,40 +98,42 @@
 <!--</div>-->
 
 
-
 <div class="ui vertical stripe segment">
     <div class="ui text container">
 
+    </div>
 
-        <h2 class="ui header">
+    <div class="ui one column stackable center aligned page grid">
+        <div class="column twelve wide">
+            <h2 class="ui teal image header">
+                <!--                <img src="assets/images/logo.png" class="image">-->
+                <div class="content">
+                    Teachers Landing Page
+                </div>
+            </h2>
 
-            <img class="ui image" src="/assets/images/pen.png">
-            <div class="content">
-                <u>Teachers Landing Page.</u>
+            <div class="ui stacked segment">
+                <div class="field">
+                    <p>We are glad to have you with us.</p>
+                    Click here to log in
+                    <div class="ui fluid large teal submit button" routerLink="/signin">Login</div>
+                </div>
+
+                <div class="ui message">
+                    Are you new here?
+                    <div class="ui fluid large teal submit button" routerLink="/signup">Create Account</div>
+                </div>
+
+
             </div>
 
-            <h4 class="ui dividing header">We are glad to have you with us.</h4>
-            <br>
-        </h2>
 
-        Click here to download code of conduct. <a href="/assets/documents/Mwalimu Wetu - Code of Coduct Document.pdf" target="_blank">Code of Conduct</a>
-
-        <p></p>
-
-        <br>
-        <br>
-
-        <span class="center aligned">
-            <a class="ui header submit button primary" routerLink="/signup">Sign Up</a>
-        </span>
-
-        <span class="center aligned">
-            <a class="ui header submit button primary" routerLink="/signin">Sign In</a>
-        </span>
-
-        <br>
-
-
+        </div>
     </div>
+
+
 </div>
+
+
+
 

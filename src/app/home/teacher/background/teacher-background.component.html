@@ -57,13 +57,13 @@
             <div class="field">
 
 
-                <div class="one field">
-                    <div class="field form-group">
-                        <label for="codeOfConductFile">Code of Conduct</label>
-                        Upload a signed copy of the Code of conduct that you downloaded above.
-                        <input #codeOfConductFile (change)="onFileChange($event)" id="codeOfConductFile" type="file">
-                    </div>
-                </div>
+<!--                <div class="one field">-->
+<!--                    <div class="field form-group">-->
+<!--                        <label for="codeOfConductFile">Code of Conduct</label>-->
+<!--                        Upload a signed copy of the Code of conduct that you downloaded above.-->
+<!--                        <input #codeOfConductFile (change)="onFileChange($event)" id="codeOfConductFile" type="file">-->
+<!--                    </div>-->
+<!--                </div>-->
 
 
 
@@ -90,7 +90,12 @@
                         <input #certificateTwo (change)="onFileChange($event)" id="certificateTwo" type="file">
                     </div>
                 </div>
+                <div class="ui checkbox">
+                    <input type="checkbox" name="example">
+                    <label>I agree with the terms stated in the <a href="/assets/documents/Mwalimu Wetu - Code of Coduct Document.pdf" target="_blank">Code of Conduct</a></label>
+                </div>
             </div>
+
 
 
 
