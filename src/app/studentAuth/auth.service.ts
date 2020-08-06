@@ -36,7 +36,8 @@ interface SigninCredentials {
 export class AuthService {
 
     // rootUrl = 'http://localhost:8181/api';
-    rootUrl = 'http://46.101.233.134/app2/api';
+    // rootUrl = 'http://46.101.233.134/app2/api';
+    rootUrl = 'https://mwalimuwebbackend.azurewebsites.net/api';
 
     signedin$ = new BehaviorSubject(false);
 
